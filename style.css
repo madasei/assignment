@@ -1,0 +1,104 @@
+@import '../fonts/fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Neue Haas Grotesk Display', Arial, sans-serif;
+  background-color: #ededed;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #000;
+  font-size: 6vw;
+}
+
+h1.live {
+  animation: blinkingRed 1.5s infinite;
+}
+
+@keyframes blinkingRed {
+  0%   { color: rgb(255, 8, 8); }
+  50%  { color: transparent; }
+  100% { color: rgb(255, 8, 8); }
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin: 2vh 0;
+}
+
+.countdown .day,
+.countdown .hour,
+.countdown .min,
+.countdown .sec {
+  color: #7d58ee;
+  text-align: center;
+}
+
+.countdown .num {
+  font-size: 8vw;
+  line-height: 1em;
+  display: block;
+}
+
+.countdown .label {
+  font-size: 2vw;
+  color: #ababab;
+  display: block;
+}
+
+.cta {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  border-radius: 0.3em;
+  margin-top: 3vh;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+.cta .poster {
+  background: url(../img/studio.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 0.3em 0.3em 0 0;
+}
+
+.cta button {
+  width: 100%;
+  border: 1px solid #7d58ee;
+  background-color: #7d58ee;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2;
+  border-radius: 0 0 0.3em 0.3em;
+  cursor: pointer;
+}
